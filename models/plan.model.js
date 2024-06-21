@@ -1,4 +1,4 @@
-modeule.exports = [
+module.exports = [
     {
       type: "bronze",
       price: 100,

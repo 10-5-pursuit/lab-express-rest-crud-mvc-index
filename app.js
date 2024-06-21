@@ -2,6 +2,9 @@
 const express = require("express");
 const locationsController = require("./controllers/locations.controller");
 const peopleController = require("./controllers/persons.controller");
+const plansController = require("./controllers/plans.controller");
+const machinesController = require("./controllers/machines.controller");
+const specialEventsController = require("./controllers/special-events.controller");
 
 // CONFIGURATION
 const app = express();
@@ -14,12 +17,21 @@ app.get("/", (req, res) => {
 // Locations Route
 app.use("/locations", locationsController);
 
-// Locations Route
-app.use("/people", peopleController);
+// People Route
+app.use("/persons", peopleController);
+
+// Plans Route
+app.use("/plans", plansController);
+
+// Machines Route
+app.use("/machines", machinesController);
+
+// Special Events Route
+app.use("/special-events", specialEventsController);
 
 // 404 PAGE 
 app.get("*", (req, res) => {
-  res.status(404).json({ error: "Page not found" });
+  res.status(404).send("Sorry, no page found!");
 });
 
 // EXPORT

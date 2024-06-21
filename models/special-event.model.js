@@ -1,4 +1,4 @@
-modeule.exports = [
+module.exports = [
     {
       name: "Cinco De Muscles",
       date: "May 5, 2022",

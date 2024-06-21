@@ -1,4 +1,4 @@
-modeule.exports = [
+module.exports = [
     {
       brand: "Bowflex",
       model: "Bowflexer 4000",
