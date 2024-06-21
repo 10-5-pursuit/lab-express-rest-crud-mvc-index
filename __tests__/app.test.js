@@ -1,7 +1,7 @@
 const request = require("supertest");
 const fs = require("fs");
 
-const app = require("../app");
+const app = require("..app/");
 const data = require("./sample-data");
 
 // BASIC EXPRESS APP
