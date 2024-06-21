@@ -15,6 +15,6 @@ module.exports = [
       name: "Amandine",
       role: "member",
       plan: "silver",
-      mainLocation: "11011",
+      mainLocation: "10011",
     },
   ];
