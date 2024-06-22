@@ -12,4 +12,13 @@ locations.get('/', ( req, res ) => {
 
 })
 
+locations.get('/:index', (req, res)=> {
+
+    const { index } = req.params
+
+    if(parseInt(index) && parseInt(index) <= locationsArray.length) {
+        res.json(locationsArray[index])
+    }
+})
+
 module.exports = locations

@@ -22,7 +22,7 @@ app.use('/person', personsController)
 app.use('/plan', plansController)
 
 // Error Message
-app.use((req, res, next) => {
+app.use((req, res) => {
     //checks the status and then if it is an error? return the message.
     res.status(404).send("<h1>Sorry, no page found!</h1>");
   });
