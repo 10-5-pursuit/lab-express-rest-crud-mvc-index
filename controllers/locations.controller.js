@@ -4,7 +4,7 @@ const express = require('express')
 const locations = express.Router()
 
 // obtains the data from the model folder pathway
-const locationsArray = require('../models/locationModel')
+const locationsArray = require('../models/location.model')
 
 // creates the path for the location array from the model locations 
 locations.get('/', ( req, res ) => {

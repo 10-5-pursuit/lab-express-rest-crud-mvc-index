@@ -2,9 +2,9 @@ const express = require('express')
 
 const persons = express.Router()
 
-const personsArray = require('../models/personModel')
+const personsArray = require('../models/person.model')
 
-persons.get('/persons', (req, res)=> {
+persons.get('/', (req, res)=> {
     res.json(personsArray)
 })
 
