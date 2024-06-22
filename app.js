@@ -16,10 +16,10 @@ app.get('/', (req,res) => {
 
 // Routing 
 app.use('/special-events', specialEventsController)
-app.use('/location', locationsController)
-app.use('/equipment', machinesController)
-app.use('/person', personsController)
-app.use('/plan', plansController)
+app.use('/locations', locationsController)
+app.use('/machines', machinesController)
+app.use('/persons', personsController)
+app.use('/plans', plansController)
 
 // Error Message
 app.use((req, res) => {
