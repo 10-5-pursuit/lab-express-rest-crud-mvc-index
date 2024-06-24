@@ -1,4 +1,4 @@
-const express = require('express');
+const express = require('express')
 const app = express();
 //models
 const locations = require("./controllers/locations.controller");
@@ -10,10 +10,10 @@ const persons = require ('./controllers/persons.controller')
 //this is where the controllers need to be imported after creation
 
 app.use('/locations',locations);
-app.use('/machines', machines);
+app.use('/equipment', machines);
 app.use('/plans', plans);
-app.use('/sEvents', sEvent);
-app.use('persons', persons);
+app.use('/specialEvents', sEvent);
+app.use('/people', persons);
 
 app.get('/', (req,res)=>{
     res.send('Welcome to the App')
