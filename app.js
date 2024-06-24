@@ -25,7 +25,7 @@ app.use('/plans', plansController)
 app.use((req, res) => {
     //checks the status and then if it is an error? return the message.
     res.status(404).send("<h1>Sorry, no page found!</h1>");
-  });
+});
 
 
 

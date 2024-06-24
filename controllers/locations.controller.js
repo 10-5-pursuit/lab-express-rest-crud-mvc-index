@@ -1,5 +1,7 @@
 const express = require('express')
 
+const people = require('../models/person.model')
+
 // creates the express route
 const locations = express.Router()
 
@@ -19,6 +21,25 @@ locations.get('/:index', (req, res)=> {
     if(parseInt(index) && parseInt(index) <= locationsArray.length) {
         res.json(locationsArray[index])
     }
+})
+
+// helper function
+const searchForMatchingPersonByZip = ( zip ) => {
+    
+    locations.forEach(place => {
+        people.filter(zipcode => {
+            
+        })
+    })
+
+}
+
+// Route created to find the list of people by zip code.
+locations.get('/people',(req, res) => {
+    const { zip } = req.params
+
+    console.log(searchForMatchingPerson(zip));
+
 })
 
 module.exports = locations
