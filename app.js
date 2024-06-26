@@ -1,9 +1,9 @@
 const express = require("express");
-const locationsData = require('./controllers.js/locations.controller');
-const machinesData = require('./controllers.js/machines.controller');
-const personsData = require('./controllers.js/persons.controller');
-const plansData = require('./controllers.js/plans.controller');
-const specialEventsData = require('./controllers.js/special-events.controller');
+const locationsData = require('./controllers/locations.controller');
+const machinesData = require('./controllers/machines.controller');
+const personsData = require('./controllers/persons.controller');
+const plansData = require('./controllers/plans.controller');
+const specialEventsData = require('./controllers/special-events.controller');
 
 
 const app = express();
@@ -19,7 +19,7 @@ app.use('/special-events', specialEventsData);
 
 
 app.get("/",(req,res)=>{
-    res.send('Hey how are you!');
+    res.send("Hello, world!");
 });
 
 

@@ -16,31 +16,31 @@ locations.get('/', (req, res) => {
 });
 
 // show route 
-// locations.get('/:arrayIndex', (req, res) => {
-//     locationsData.map(locate => {
-//         locate["people"] = [];
-//         personsData.map(person => {
-//             if (locate.zip === person.mainLocation) {
-//                 locate["people"].push(person);
-//                 // console.log(person)
-//             }
-//         });
-//     });
-
-//     res.json(locationsData);
-// });
-
-// show route 
-locations.get('/:arrayIndex', (req, res) => {
-    const { arrayIndex } = req.params;
-    if (locationsData[arrayIndex]) {
-        res.json(locationsData[arrayIndex]);
-    } else {
-        res.json({ error: "Location not Found" });
-    }
+locations.get('/:persons', (req, res) => {
+    locationsData.map(locate => {
+        locate["people"] = [];
+        personsData.map(person => {
+            if (locate.zip === person.mainLocation) {
+                locate["people"].push(person);
+                // console.log(person)
+            }
+        });
+    });
 
     res.json(locationsData);
 });
+
+// show route 
+// locations.get('/:arrayIndex', (req, res) => {
+//     const { arrayIndex } = req.params;
+//     if (locationsData[arrayIndex]) {
+//         res.json(locationsData[arrayIndex]);
+//     } else {
+//         res.json({ error: "Location not Found" });
+//     }
+
+//     res.json(locationsData);
+// });
 
 // create route
 locations.post('/', checkForNameKey, (req, res)=>{
